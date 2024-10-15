@@ -1,6 +1,7 @@
 package com.dprojects;
 
 import com.dprojects.dto.CarDTO;
+import com.dprojects.enums.CarType;
 
 import java.util.ArrayList;
 import java.util.ArrayList;
@@ -16,16 +17,17 @@ public class Main {
         System.out.println("The total number of cars in the parking : " + cars.size());
 
         for (CarDTO car : cars) {
-            System.out.println(car.getId() +" Marca: "+ car.marca +" -- Model: "+ car.model);
+            System.out.println(car.getId() +" Marca: "+ car.marca +" -- Model: "+ car.model + " -- CarType: "+car.type.toString());
         }
     }
 
     public static ArrayList<CarDTO> getTotalNumberOfCarsInTheParking() {
         ArrayList<CarDTO> carList = new ArrayList<>();
-        carList.add(new CarDTO(1, "VK","Golf1"));
-        carList.add(new CarDTO(2, "VK","Golf2"));
-        carList.add(new CarDTO(3, "Honda","Accord"));
-        carList.add(new CarDTO(4, "Honda","Civic"));
+        carList.add(new CarDTO(1, "VK","Golf1", CarType.HATCHBACK));
+        carList.add(new CarDTO(2, "VK","Golf2", CarType.HATCHBACK));
+        carList.add(new CarDTO(5, "VK","Golf3", CarType.HATCHBACK));
+        carList.add(new CarDTO(3, "Honda","Accord", CarType.SEDAN));
+        carList.add(new CarDTO(4, "Honda","Civic", CarType.SEDAN));
         return carList;
     }
 }
