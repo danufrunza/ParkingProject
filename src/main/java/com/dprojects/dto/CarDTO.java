@@ -10,13 +10,15 @@ public class CarDTO
     public String marca;
     public String model;
     public CarType type; // Using the enum as a type
+    public boolean forSale; // Using the enum as a type
 
     // Constructor
-    public CarDTO(int id, String marca, String model, CarType type) {
+    public CarDTO(int id, String marca, String model, boolean forSale, CarType type) {
         this.id = id;
         this.model = model;
         this.marca = marca;
         this.type = type;
+        this.forSale = forSale;
     }
 
     // Getters
@@ -27,7 +29,9 @@ public class CarDTO
     public String getMarca() {
         return marca;
     }
-
+    public boolean isForSale() { // Getter for forSale
+        return forSale;
+    }
     public String getModel() {
         return model;
     }
