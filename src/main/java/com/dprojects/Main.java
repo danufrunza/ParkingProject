@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println("The total number of cars in the parking : " + cars.size());
 
-        ArrayList<CarDTO> carsForSale =  cars.stream().filter(car->car.isForSale())
+        ArrayList<CarDTO> carsForSale =  cars.stream().filter(CarDTO::isForSale)
                 .collect(Collectors.toCollection(ArrayList::new));
 
         System.out.println("The total number of cars in the parking for Sale: " + carsForSale.size());
@@ -26,7 +26,6 @@ public class Main {
         for (CarDTO car : carsForSale) {
             System.out.println(car.getId() +" Marca: "+ car.marca +" -- Model: "+ car.model + " -- CarType: "+car.type.toString());
         }
-
     }
 
     public static ArrayList<CarDTO> getTotalNumberOfCarsInTheParking() {
