@@ -32,9 +32,10 @@ public class Main {
         ArrayList<CarDTO> carList = new ArrayList<>();
         carList.add(new CarDTO(1, "VK","Golf1",true, CarType.HATCHBACK));
         carList.add(new CarDTO(2, "VK","Golf2",false, CarType.HATCHBACK));
-        carList.add(new CarDTO(5, "VK","Golf3",true, CarType.HATCHBACK));
         carList.add(new CarDTO(3, "Honda","Accord",true, CarType.SEDAN));
-        carList.add(new CarDTO(4, "Honda","Civic",true, CarType.SEDAN));
+        carList.add(new CarDTO(4, "Honda","Civic",false, CarType.SEDAN));
+        carList.add(new CarDTO(5, "VK","Golf3",true, CarType.HATCHBACK));
+        carList.add(new CarDTO(6, "VK","Polo",true, CarType.HATCHBACK));
         return carList;
     }
 }
